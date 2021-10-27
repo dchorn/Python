@@ -1,7 +1,12 @@
+import os
 from turtle import *
 import turtle
 import turtle_parts
 import math_functions
+import turtle
+import sol_mercuri
+import venus_terra_mart
+import jupiter_saturn
 
 def move_pen(x: int, y: int):
     """Move the pen por A coordinates to B coordinates without drawing"""
@@ -76,6 +81,13 @@ def menu_bg():
     end_fill()
     
     
+def setup(color: str = "#111", speed: int = 0, size: tuple = (500, 500)):
+    """Sets the canvas for the drawing"""
+    # turtle.hideturtle()
+    turtle.speed(speed)
+    turtle.bgcolor(color)
+    turtle.setup(size[0], size[1])
+    
 def btn_press(x: int, y: int):
     """Find the position of each button, if you press one it will do something"""
     x_turtle = -75
@@ -93,8 +105,17 @@ def btn_press(x: int, y: int):
         speed(0)
         math_functions.mega_spiral(6)
     elif x_turtle < x < x_turtle+150 and y_turtle-200 > y > y_turtle-250:
-        print("Easter Egg")
-    elif x_turtle < x < x_turtle+150 and y_turtle-300 > y > y_turtle-350:
+        clearscreen()
+        setup()
+        sol_mercuri.draw_sol()
+        sol_mercuri.draw_mercuri()
+        venus_terra_mart.draw_venus()
+        venus_terra_mart.draw_terra()
+        venus_terra_mart.draw_mart()
+        jupiter_saturn.draw_jupiter()
+        jupiter_saturn.draw_saturn()
+
+    elif x_turtle < x < x_turtle+150 and y_turtle-200 > y > y_turtle-350:
         bye()
     else:
         print(x, y)

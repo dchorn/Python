@@ -9,7 +9,7 @@ def turtle_conf(size: int, spd: int):
     speed(spd)
 
 
-def move_pen(pos_x, pos_y):
+def move_pen(pos_x: float, pos_y: float):
     """Moves the pen from point A to point B without drawing"""
     penup()
     goto(pos_x, pos_y)
@@ -118,7 +118,7 @@ def draw_limbs(x: int = 0, y: int = 0, head_size: int = 75, legs_size: int = 50)
     math_functions.polygon_circle(2, legs_size)
 
 
-def draw_turtle(x, y, color1, color2, head_size, legs_size):
+def draw_turtle(x: int, y: int, color1: str, color2: str, head_size: int, legs_size: int):
     """Draw the complete turtle"""
     color(color1, color2)
     draw_limbs(x, y, head_size, legs_size)
