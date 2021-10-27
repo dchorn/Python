@@ -81,7 +81,7 @@ def menu_bg():
     end_fill()
     
     
-def setup(color: str = "#111", speed: int = 0, size: tuple = (500, 500)):
+def setup(color: str = "#111", speed: int = 0, size: tuple = (1250, 500)):
     """Sets the canvas for the drawing"""
     # turtle.hideturtle()
     turtle.speed(speed)
