@@ -58,6 +58,7 @@ def main():
     sum_vacuna_2: int = sum_vacuna(table, 21, "BARCELONA")
     absolute_difference: int = absolute_dif(sum_vacuna_1, sum_vacuna_2)[0]
     absolute_percentage: float = round(absolute_dif(sum_vacuna_1, sum_vacuna_2)[1], 2)
+
     stop: float = time.time()
 
     print(f"Tiempo Ejecucion: {round(stop-start, 2)} seconds")
