@@ -1,4 +1,4 @@
-"""Program to read csv's"""
+"""Program to read csv's with dictionaris"""
 from pathlib import Path
 import time
 
