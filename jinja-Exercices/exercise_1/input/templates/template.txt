@@ -1,0 +1,7 @@
+Dear {{ friend }}
+
+I would like to invite you to my party next Friday at 19:00.
+
+Yours sincerely,
+Stephen
+
