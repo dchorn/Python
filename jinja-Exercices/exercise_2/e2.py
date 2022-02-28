@@ -26,3 +26,15 @@ Exercici 2:
 
 """
 
+from pathlib import Path
+
+def rename_files(pattern: str, old_str: str, new_str: str):
+
+  current_dir: Path = Path(".")
+  old_filepath_list: list[Path] = list(current_dir.glob(pattern))
+
+def main():
+  rename_files('*.txt', "a", "b")
+
+if __name__ == "__main__":
+    main()

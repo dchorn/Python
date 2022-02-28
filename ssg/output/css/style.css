@@ -1,0 +1,18 @@
+/* Color Schemes:
+    - https://coolors.co/
+    - https://paletton.com/
+*/
+
+h1 {
+    color:    #264653;
+    text-align: center;
+}
+
+p {
+    color:    #2a9d8f;
+    text-align: center;
+}
+
+p.meta {
+    color: #e76f51;
+}
