@@ -32,8 +32,8 @@ def main(input_dir: Path, output_dir: Path) -> None:
 
     counter: int = 1
 
-    for html in html_str_list:
-        vars_dict:         dict = {"html_list": html}
+    for (html, meta) in zip(html_str_list, metadata_list):
+        vars_dict:         dict = {"html_list": html, "meta_list": meta}
         html_str:          str  = engine.fill_template(template_dir, template_filename, vars_dict)
         filename: str  = f"Archivo_{counter}.html"
         (output_dir/filename).write_text(html_str)
