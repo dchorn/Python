@@ -1,3 +1,6 @@
+#! /usr/bin/env python3
+# Made by Denys Chorny - @ dechorn
+
 """
 Exercici 2:
 
@@ -28,13 +31,25 @@ Exercici 2:
 
 from pathlib import Path
 
-def rename_files(pattern: str, old_str: str, new_str: str):
+def rename_filename_list(old_filename_list: list[str], old_str: str, new_str: str) -> list[str]:
 
-  current_dir: Path = Path(".")
-  old_filepath_list: list[Path] = list(current_dir.glob(pattern))
+    new_filename_list: list[str] = [filename.replace(old_str, new_str) for filename in old_filename_list]
+    return new_filename_list
+
+def rename_files(glob: str, old_str: str, new_str: str):
+
+    glob_dir: Path = Path(glob)
+    dir:      Path = glob_dir.parent
+    pattern:  Path = glob_dir.name
+
+    old_filename_list: list[str] = [filepath.name for filepath in dir.glob(pattern)]
+    new_filename_list: list[str] = rename_filename_list(old_filename_list, old_str, new_str)
+    print(old_filename_list)
+    print(new_filename_list)
 
 def main():
-  rename_files('*.txt', "a", "b")
+    rename_files("2-test-files/*.txt", "a", "b")
+
 
 if __name__ == "__main__":
     main()
