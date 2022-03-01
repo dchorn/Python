@@ -26,18 +26,17 @@ Exercici 2:
 
 - Notes:
   - Utilitzeu el directori 2-test-files per fer proves.
-
 """
 
 from pathlib import Path
 
 def rename_filename_list(old_filename_list: list[str], old_str: str, new_str: str) -> list[str]:
-
+    """Change values from a list"""
     new_filename_list: list[str] = [filename.replace(old_str, new_str) for filename in old_filename_list]
     return new_filename_list
 
 def rename_files(glob: str, old_str: str, new_str: str):
-
+    """Rename files"""
     glob_dir: Path = Path(glob)
     dir:      Path = glob_dir.parent
     pattern:  Path = glob_dir.name
