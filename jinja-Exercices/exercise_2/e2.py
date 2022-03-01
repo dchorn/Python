@@ -66,6 +66,8 @@ def rename_files(glob: str, old_str: str, new_str: str):
 
     rename_filename_on_disk(old_filename_list, new_filename_list, dir)
 
+# Need to create checks/validations for the program
+
 
 def main():
     rename_files("2-test-files/*.txt", "a", "b")
