@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+# Made by Denys Chorny - @ dechorn
 """
 Exercici 3:
 
@@ -8,5 +10,9 @@ Exercici 3:
 
 """
 
+def main():
+    print("hello")
 
 
+if __name__ == "__main__":
+    main()
