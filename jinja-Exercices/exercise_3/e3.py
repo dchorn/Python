@@ -9,10 +9,24 @@ Exercici 3:
 - Permet passar el glob per la línia d'ordres utilitzant sys.argv.
 
 """
+from pathlib import Path
+
+import cmdline
+import sys
+
+def list_tree(pattern: Path):
+    return
+
 
 def main():
-    print("hello")
+
+    print(list(p.glob("**/*")))
 
 
 if __name__ == "__main__":
+    # args: list[str] = sys.argv         # For command-line
+    args: list[str] = [sys.argv[0], "input"]  # For easy testing
+
+    pattern = cmdline.parse_args(args)
+
     main()
