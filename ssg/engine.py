@@ -61,7 +61,7 @@ def fill_template(template_dir: Path, template_filename: str, vars_dict: dict) -
         Keeping the template_dir and filename separate allows template inheritance.
         Autoescapes by default.
         Returns the result as a string."""
-
+    
     env:        Environment = Environment( loader=FileSystemLoader(template_dir),
                                            autoescape=select_autoescape() )
     template:   Template    = env.get_template(template_filename)

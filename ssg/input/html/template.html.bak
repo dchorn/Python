@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Page Title</title>
+        <meta name="description" content="A simple HTML5 Template for new projects.">
+        <meta name="Author" content="Static Site Generator">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        {% for entry_html, entry_metadata in entry_list %}
+            <h1>{{ entry_metadata.title }}</h1>
+
+            <p class="meta">
+                Date:   {{ entry_metadata.date }}
+                Author: {{ entry_metadata.author }}
+            </p>
+
+            {{ entry_html|safe|indent(width=12) }}
+        {% endfor %}
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
