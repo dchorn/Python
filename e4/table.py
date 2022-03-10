@@ -23,7 +23,7 @@ def read_csv(csv_file_path: str) -> str:
 def separate_by_rows(contents: str) -> list[str]:
     '''Input:  The file contents as a single string.
         Output: A list of strings where each string is a row of the csv file.'''
-    
+
     rows: list[str] = contents.split("\n")
 
     return rows
@@ -54,7 +54,7 @@ def read_table(csv_file_path: str) -> list[list[str]]:
 
 # -----------------------------------------------------------------------------
 def filter_rows(table: list[list[str]], column_name: str, search_str: str) -> list[list[str]]:
-    '''Input:  Table, columne and search string to filter by. 
+    '''Input:  Table, columne and search string to filter by.
        Output: Returns table with rows whose column_name includes search_str. Includes the header.'''
 
     # Precondition: There is at least a header in the table
@@ -76,7 +76,7 @@ def filter_rows(table: list[list[str]], column_name: str, search_str: str) -> li
                                       if (search_str in row[column_index]) ]
 
     # Add header to result
-    result: list[list[str]] = [header] + filtered_data
+    result: list[list[str]] = filtered_data
 
     return result
 
@@ -91,7 +91,7 @@ def get_column(table: list[list[str]], column_name: str) -> list[str]:
 
     # Get the header and data body
     header: list[str]       = table[0]
-    data:   list[list[str]] = table[1:]
+    data:   list[list[str]] = table[0:]
 
     # Precondition: column_name is in the header
     assert column_name in header
