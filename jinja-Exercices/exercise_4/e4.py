@@ -57,7 +57,7 @@ if __name__ == "__main__":
     covid_table: list[list[str]] = table.read_table("covid-dades-simple.csv")
     header:     list[str]       = covid_table[0]
     covid_dict: dict[str, list] = {column_name: table.get_column(covid_table, column_name) for column_name in header}
-    print(covid_dict)
+    pp.pp(covid_dict)
     # print(csv_dict)
 
 # -----------------------------------------------------------------------------

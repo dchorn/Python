@@ -111,7 +111,6 @@ def main(csv_dir: str):
     """Donde ocurre la magia del programa"""
     nom: str = "NOM"
     exitus: str = "EXITUS"
-    header: list[str] = [nom, exitus]
     covid_table: list[list[str]] = table.read_table(csv_dir)
 
     name_column: list[str] = table.get_column(covid_table, nom)
