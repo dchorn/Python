@@ -10,9 +10,15 @@ def say_hello_v1():
 # ------------------------------------------------------------------------------------
 
 def say_hello_v2(x):
+
+    # Recursive branch
     if(x>=1):
         print("hello")
         say_hello_v2(x-1)
+
+    # Termination branch
+    if (x == 0):
+        print("Finished!")
 
 
 def main():
